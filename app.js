@@ -9,6 +9,11 @@ var index = require('./routes/index');
 var administrators = require('./routes/administrators');
 var shop = require('./routes/shop');
 var items = require('./routes/items');
+var orders = require('./routes/orders');
+var users = require('./routes/users');
+var promotion = require('./routes/promotion');
+var afterSale = require('./routes/after_sale');
+var statistics = require('./routes/statistics');
 
 var app = express();
 
@@ -28,6 +33,11 @@ app.use('/', index);
 app.use('/administrators', administrators);
 app.use('/shop', shop);
 app.use('/items', items);
+app.use('/users', users);
+app.use('/promotion', promotion);
+app.use('/aftersale', afterSale);
+app.use('/statistics', statistics);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
